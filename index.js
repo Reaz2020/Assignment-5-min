@@ -145,7 +145,7 @@ function addAmountToCardAmount(amountToBeAdded,idOfInitialSuggestedAmountInsideC
 
 //---------------------------------------------------
 
-//----- helper function for donation 
+//----- helper common function for donation 
 function validateAmount(paraAmount) {
   const regex = /^(0|[1-9]\d*)(\.\d+)?$/; // Regex for non-negative numbers including floats
 
@@ -172,7 +172,7 @@ function getInputFieldValue(){
 
 
 }
-// when i will press to close the modal this function will re add the hidden class to modal to keep it hidden
+// when i will press to close the modal this function will re add the hidden class, to modal to keep it hidden
 function reAddingHiddenClass(){ 
   document.getElementById('valid-modal').classList.add('hidden') 
 }
@@ -205,18 +205,12 @@ document.getElementById('donation-btn').addEventListener('click', function() {
   document.getElementById('donation-btn').classList.add('bg-lime-500');
 
 
- // historyDonationToggling(historyId,donationId,donationBtn,historyBtn)
+
 
 })
 
 
-// function historyDonationToggling(historyId,donationId,donationBtn,historyBtn){
-  
-//   donationId.classList.remove('hidden');
-//   donationBtn.classList.add('bg-lime-500');
-//   historyBtn.classList.remove('bg-lime-500');
 
-// }
 
 
 function creatingADivForHistoryPage(ParaAmount){
