@@ -5,6 +5,7 @@
 //-----------------
 //donation handling for first card 
 document.getElementById('donate-now-btn').addEventListener('click', function() {
+  const title=document.querySelector('.card-title-one').innerText
   
 
   let newInitialSuggestedAmount =  parseFloat(document.getElementById('initial-suggestedAmount').innerText);
@@ -24,7 +25,7 @@ document.getElementById('donate-now-btn').addEventListener('click', function() {
     addAmountToCardAmount(userAmount,idOfInitialSuggestedAmountInsideCard , newInitialSuggestedAmountInsideCard )
     document.getElementById('valid-modal').classList.remove('hidden') 
     document.getElementById('donate-now-btn').setAttribute('href', '#valid-modal');
-    creatingADivForHistoryPage(userAmount)
+    creatingADivForHistoryPage(userAmount,title)
     return;
   }
   if(!validateAmount(userAmount))
@@ -45,6 +46,7 @@ document.getElementById('donate-now-btn').addEventListener('click', function() {
 
 //donation handling for seconde card 
 document.getElementById('donate-now-btnTwo').addEventListener('click', function() {
+  const title=document.querySelector('.card-title-two').innerText
   
 
   let newInitialSuggestedAmount =  parseFloat(document.getElementById('initial-suggestedAmount').innerText);
@@ -64,7 +66,7 @@ document.getElementById('donate-now-btnTwo').addEventListener('click', function(
     addAmountToCardAmount(userAmount,idOfInitialSuggestedAmountInsideCard , newInitialSuggestedAmountInsideCard )
     document.getElementById('valid-modal').classList.remove('hidden') 
     document.getElementById('donate-now-btn').setAttribute('href', '#valid-modal');
-    creatingADivForHistoryPage(userAmount)
+    creatingADivForHistoryPage(userAmount,title)
   }
   else{
     alert('enter valid amount')
@@ -80,6 +82,7 @@ document.getElementById('donate-now-btnTwo').addEventListener('click', function(
 
 //donation handling for third card 
 document.getElementById('donate-now-btnThree').addEventListener('click', function() {
+  const title=document.querySelector('.card-title-three').innerText
   
 
   let newInitialSuggestedAmount =  parseFloat(document.getElementById('initial-suggestedAmount').innerText);
@@ -99,7 +102,7 @@ document.getElementById('donate-now-btnThree').addEventListener('click', functio
     addAmountToCardAmount(userAmount,idOfInitialSuggestedAmountInsideCard , newInitialSuggestedAmountInsideCard )
     document.getElementById('valid-modal').classList.remove('hidden') 
     document.getElementById('donate-now-btnThree').setAttribute('href', '#valid-modal');
-    creatingADivForHistoryPage(userAmount)
+    creatingADivForHistoryPage(userAmount,title)
   }
   else{
     alert('enter valid amount')
@@ -110,7 +113,7 @@ document.getElementById('donate-now-btnThree').addEventListener('click', functio
 })
 
 
-//------------------
+//------------------  helper common function for donation 
 
 
 
@@ -213,7 +216,7 @@ document.getElementById('donation-btn').addEventListener('click', function() {
 
 
 
-function creatingADivForHistoryPage(ParaAmount){
+function creatingADivForHistoryPage(ParaAmount, title){
   const date = new Date();
   let amount=ParaAmount;
 
@@ -222,7 +225,7 @@ function creatingADivForHistoryPage(ParaAmount){
 
   const h1 = document.createElement('h1');
   h1.className = 'text-xl font-semibold';
-  h1.textContent = 'Thanks for donating ' + amount;
+  h1.textContent = 'Thanks for ' + amount +' Taka ' + title;
   div.appendChild(h1);
 
   const p = document.createElement('p');
