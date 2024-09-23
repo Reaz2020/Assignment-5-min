@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- daisy  ui plus tailwind css cdn link  -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="index.css">
+
+   
+</head>
+<body class="container mx-auto">
+
+
+    <header class="flex-col items-center justify-center border-2 mb-4 sticky top-0 z-10 ">
+
+      <div class="header-1 flex items-center justify-around gap-40 bg-slate-50">
+        <button class="btn">Blog</button>
+        <div class="flex items-center justify-center">
+            <img class="max-h-5 max-w-5" src="assets/logo.png" alt=""> 
+            <p>Donate Bangladesh</p>
+        </div>
+        <div class="flex items-center justify-center">
+            <img class="max-h-5 max-w-5" src="assets/coin.png" alt=""> 
+            <p> <span id="initial-suggestedAmount">10000</span>BDT</p>
+        </div>
+      </div>
+
+
+       <div class=" flex justify-center gap-32 mt-24">
+            <button class="btn btn bg-white border-2">Donation</button>
+            <button class="btn bg-white border-2">History</button>
+       </div>
+
+   
+
+    </header>
+
+    <section class="cards w-11/12 mx-auto">
+
+
+    <!-- card one -->
+        <div class="card flex justify-between gap-8 lg:card-side bg-base-100 shadow-xl p-4">
+            <figure class="flex-1">
+              <img
+                src="assets/noakhali.png"
+                alt="Album" />
+            </figure>
+            <div class="card-body flex-1 ">
+                <div class="flex items-center justify-center">
+                    <img class="max-h-5 max-w-5" src="assets/coin.png" alt=""> 
+                    <p> <span id="initial-suggestedAmountInsideCard">5000</span>BDT</p>
+                </div>
+              <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
+              <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+              <input id="amount" class="border-2 amount" type="text" placeholder="Amount">
+
+              <div class="card-actions w-full border-2 ">
+             
+                <!-- The button to open modal -->
+                <a href="#valid-modal"  onclick="checkAmount()"  id="donate-now-btn" class="btn w-full bg-lime-400">Donate now</a>
+                <!-- <button onclick="checkAmount()"  id="donate-now-btn" class="btn w-full bg-lime-400">  Donate now</button> -->
+      
+ 
+      
+              </div>
+            </div>
+        </div>
+
+
+    
+
+
+    </section>
+
+<!-- modals -->
+
+
+              
+
+               <div class=" hidden modal z-10  " role="dialog" id="valid-modal">
+                <div class="modal-box  ">
+                <h3 class="text-lg font-bold">Hello!</h3>
+                <p class="py-4">Thanks for your donation</p>
+                 <div class="modal-action">
+                 <a href="#" class="btn" onclick="reAddingHiddenClass()">Close!</a>
+                 </div>
+                </div>
+              </div>  
+
+
+
+    <script src="index.js"></script>
+    
+</body>
+</html>
