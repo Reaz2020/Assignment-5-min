@@ -2,7 +2,8 @@
 
 
 
-
+//-----------------
+//donation handling
 document.getElementById('donate-now-btn').addEventListener('click', function() {
   
 
@@ -90,4 +91,8 @@ function getInputFieldValue(){
 
 
 }
+
+//------------------------------
+//history and donation toggling 
+document.getElementById()
 
