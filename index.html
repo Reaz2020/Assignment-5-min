@@ -17,7 +17,7 @@
     <header class="flex-col items-center justify-center border-2 mb-4 sticky top-0 z-10 ">
 
       <div class="header-1 flex items-center justify-around gap-40 bg-slate-50">
-        <button class="btn">Blog</button>
+        <button class="btn bg-lime-500">Blog</button>
         <div class="flex items-center justify-center">
             <img class="max-h-5 max-w-5" src="assets/logo.png" alt=""> 
             <p>Donate Bangladesh</p>
@@ -30,15 +30,15 @@
 
 
        <div class=" flex justify-center gap-32 mt-24">
-            <button class="btn btn bg-white border-2">Donation</button>
-            <button class="btn bg-white border-2">History</button>
+            <button id="donation-btn" class="btn btn bg-lime-500 border-2">Donation</button>
+            <button id="history-btn" class="btn bg-lime-500 border-2 bg-white">History</button>
        </div>
 
    
 
     </header>
-
-    <section class="cards w-11/12 mx-auto">
+<!-- cards section -->
+    <section id="cards" class="cards w-11/12 mx-auto">
 
 
     <!-- card one -->
@@ -63,7 +63,7 @@
                 <a href="#valid-modal"    id="donate-now-btn" class="btn w-full bg-lime-400">Donate now</a>
                 <!-- <button onclick="checkAmount()"  id="donate-now-btn" class="btn w-full bg-lime-400">  Donate now</button> -->
       
- 
+         
       
               </div>
             </div>
@@ -84,12 +84,12 @@
                 </div>
               <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
               <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-              <input id="amount" class="border-2 amount" type="text" placeholder="Amount">
+              <input id="amount-two" class="border-2 amount" type="text" placeholder="Amount">
 
               <div class="card-actions w-full border-2 ">
              
                 <!-- The button to open modal -->
-                <a href="#"   id="donate-now-btnTwo" class="btn w-full bg-lime-400">Donate now</a>
+                <a href="#valid-modal"   id="donate-now-btnTwo" class="btn w-full bg-lime-400">Donate now</a>
                 <!-- <button onclick="checkAmount()"  id="donate-now-btn" class="btn w-full bg-lime-400">  Donate now</button> -->
       
  
@@ -114,12 +114,12 @@
                 </div>
               <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
               <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-              <input id="amount" class="border-2 amount" type="text" placeholder="Amount">
+              <input id="amount-three" class="border-2 amount" type="text" placeholder="Amount">
 
               <div class="card-actions w-full border-2 ">
              
                 <!-- The button to open modal -->
-                <a href="#"   id="donate-now-btnThree" class="btn w-full bg-lime-400">Donate now</a>
+                <a href="#valid-modal"   id="donate-now-btnThree" class="btn w-full bg-lime-400">Donate now</a>
                 <!-- <button onclick="checkAmount()"  id="donate-now-btn" class="btn w-full bg-lime-400">  Donate now</button> -->
       
  
@@ -144,7 +144,9 @@
                 </div>
               </div>  
 
-<section class="history min-h-96 bg-slate-400 border-2">
+            
+<!-- history section -->
+<section id="history" class="history min-h-96 bg-slate-400 border-2">
 
 </section>
 
